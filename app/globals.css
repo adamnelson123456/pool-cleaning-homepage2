@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* This accounts for the fixed header */
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+/* Typography Styles */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-wide;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl;
+    letter-spacing: 0.02em;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl;
+    letter-spacing: 0.01em;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl;
+    letter-spacing: 0.01em;
+  }
+
+  /* Service cards and section titles */
+  .font-bold {
+    letter-spacing: 0.02em;
+  }
+
+  /* Price tags and category labels */
+  .font-semibold {
+    letter-spacing: 0.01em;
+  }
+
+  /* Navigation and buttons */
+  .font-medium {
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    @apply font-normal leading-relaxed;
+    letter-spacing: 0.005em;
+  }
+  
+  .text-sm {
+    @apply font-normal;
+  }
+  
+  .text-base {
+    @apply font-normal;
+  }
+  
+  .text-lg {
+    @apply font-medium;
+  }
+  
+  .text-xl {
+    @apply font-medium;
+  }
+  
+  .text-2xl {
+    @apply font-semibold tracking-wide;
+  }
+  
+  .text-3xl {
+    @apply font-bold tracking-wide;
+  }
+  
+  .text-4xl {
+    @apply font-bold tracking-wide;
+  }
+  
+  .text-5xl {
+    @apply font-bold tracking-wide;
+  }
+  
+  .text-6xl {
+    @apply font-bold tracking-wide;
+  }
+}
+
+@layer base {
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
