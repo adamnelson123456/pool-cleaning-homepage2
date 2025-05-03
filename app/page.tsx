@@ -244,15 +244,8 @@ export default function Home() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
-              <div
-                ref={service1Ref}
-                className={`group relative rounded-lg border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:scale-[1.02] ${
-                  service1InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-              >
-                <div className="absolute -top-3 right-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  Starting at $99/mo
-                </div>
+              {/* Cleaning & Maintenance Card */}
+              <div ref={service1Ref} className="group relative rounded-lg border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:scale-[1.02] opacity-100 translate-y-0">
                 <div className="mb-4 rounded-full bg-blue-100 p-3 w-12 h-12 flex items-center justify-center text-blue-600">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -273,10 +266,9 @@ export default function Home() {
                     <line x1="9" y1="14" x2="15" y2="14"></line>
                   </svg>
                 </div>
-                <h3 className="mb-2 text-xl font-bold">Pool Cleaning</h3>
+                <h3 className="mb-2 text-xl font-bold">Cleaning & Maintenance</h3>
                 <p className="mb-4 text-muted-foreground">
-                  Regular cleaning services to keep your pool sparkling clean and free of debris, algae, and
-                  contaminants.
+                  Regular cleaning and expert equipment maintenance to keep your pool sparkling clean, balanced, and running efficiently year-round.
                 </p>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center">
@@ -291,26 +283,23 @@ export default function Home() {
                     <Check className="mr-2 h-4 w-4 text-blue-500" />
                     <span className="text-sm">Filter cleaning</span>
                   </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-teal-500" />
+                    <span className="text-sm">Pump & filter service</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-teal-500" />
+                    <span className="text-sm">Heater maintenance</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-teal-500" />
+                    <span className="text-sm">Equipment upgrades</span>
+                  </li>
                 </ul>
-                <Link
-                  href="#"
-                  className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
-                >
-                  Learn More
-                  <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
               </div>
 
-              <div
-                ref={service2Ref}
-                className={`group relative rounded-lg border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:scale-[1.02] ${
-                  service2InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: "100ms" }}
-              >
-                <div className="absolute -top-3 right-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  Starting at $149
-                </div>
+              {/* Repair Card */}
+              <div ref={service2Ref} className="group relative rounded-lg border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:scale-[1.02] opacity-100 translate-y-0" style={{ transitionDelay: "100ms" }}>
                 <div className="mb-4 rounded-full bg-teal-100 p-3 w-12 h-12 flex items-center justify-center text-teal-600">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -327,9 +316,9 @@ export default function Home() {
                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                   </svg>
                 </div>
-                <h3 className="mb-2 text-xl font-bold">Maintenance & Repair</h3>
+                <h3 className="mb-2 text-xl font-bold">Repair</h3>
                 <p className="mb-4 text-muted-foreground">
-                  Expert equipment maintenance and repairs to keep your pool systems running efficiently year-round.
+                  Professional repairs to keep your pool systems and surfaces in top condition.
                 </p>
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center">
@@ -344,26 +333,15 @@ export default function Home() {
                     <Check className="mr-2 h-4 w-4 text-teal-500" />
                     <span className="text-sm">Equipment upgrades</span>
                   </li>
+                  <li className="flex items-center">
+                    <Check className="mr-2 h-4 w-4 text-rose-500" />
+                    <span className="text-sm">Crack & surface repairs</span>
+                  </li>
                 </ul>
-                <Link
-                  href="#"
-                  className="inline-flex items-center text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors"
-                >
-                  Learn More
-                  <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
               </div>
 
-              <div
-                ref={service3Ref}
-                className={`group relative rounded-lg border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:scale-[1.02] ${
-                  service3InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: "200ms" }}
-              >
-                <div className="absolute -top-3 right-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  Starting at $1,999
-                </div>
+              {/* Resurfacing Card */}
+              <div ref={service3Ref} className="group relative rounded-lg border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-xl hover:scale-[1.02] opacity-100 translate-y-0" style={{ transitionDelay: "200ms" }}>
                 <div className="mb-4 rounded-full bg-rose-100 p-3 w-12 h-12 flex items-center justify-center text-rose-600">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -390,24 +368,17 @@ export default function Home() {
                 <ul className="space-y-2 mb-4">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-rose-500" />
-                    <span className="text-sm">Plaster & pebble finishes</span>
+                    <span className="text-sm">Plaster and quartz</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-rose-500" />
-                    <span className="text-sm">Tile replacement</span>
+                    <span className="text-sm">Pebble finishes</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-rose-500" />
-                    <span className="text-sm">Crack & surface repairs</span>
+                    <span className="text-sm">Tile and coping</span>
                   </li>
                 </ul>
-                <Link
-                  href="#"
-                  className="inline-flex items-center text-sm font-medium text-rose-600 hover:text-rose-800 transition-colors"
-                >
-                  Learn More
-                  <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
               </div>
             </div>
           </div>
@@ -455,8 +426,11 @@ export default function Home() {
               <Button
                 size="lg"
                 className="bg-white text-teal-700 hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                asChild
               >
-                Learn More
+                <Link href="/quote">
+                  Learn More
+                </Link>
               </Button>
             </div>
           </div>
@@ -491,7 +465,7 @@ export default function Home() {
                     <Phone className="h-6 w-6 mt-1 text-teal-600" />
                     <div>
                       <h4 className="text-lg font-medium">Phone</h4>
-                      <p className="text-lg text-muted-foreground">(713) 555-1234</p>
+                      <p className="text-lg text-muted-foreground">(281) 660-8262</p>
                     </div>
                   </div>
 
@@ -499,7 +473,7 @@ export default function Home() {
                     <Mail className="h-6 w-6 mt-1 text-teal-600" />
                     <div>
                       <h4 className="text-lg font-medium">Email</h4>
-                      <p className="text-lg text-muted-foreground">info@oolspoolcleaning.com</p>
+                      <p className="text-lg text-muted-foreground">OolsPoolCleaning@gmail.com</p>
                     </div>
                   </div>
 
@@ -673,11 +647,11 @@ export default function Home() {
             <div className="space-y-2">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-teal-700" />
-                <span className="text-sm">(713) 555-1234</span>
+                <span className="text-sm">(281) 660-8262</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-teal-700" />
-                <span className="text-sm">info@oolspoolcleaning.com</span>
+                <span className="text-sm">OolsPoolCleaning@gmail.com</span>
               </div>
               <div className="flex space-x-3 mt-4">
                 <Link
